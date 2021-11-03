@@ -55,6 +55,7 @@
 							<npmVersion>8.1.0</npmVersion>
 						</configuration>
 					</execution>
+					
 					<execution>
 						<id>npm install</id>
 						<goals>
@@ -64,6 +65,7 @@
 							<arguments>install</arguments>
 						</configuration>
 					</execution>
+
 					<execution>
 						<id>npm run build</id>
 						<goals>
