@@ -11,12 +11,19 @@ import UploadProductPage from "./views/UploadProductPage/UploadProductPage.js";
 import DetailProductPage from "./views/DetailProductPage/DetailProductPage";
 import CartPage from "./views/CartPage/CartPage";
 import HistoryPage from "./views/HistoryPage/HistoryPage";
+import Axios from 'axios';
 
 //null   Anyone Can go inside
 //true   only logged in user can go inside
 //false  logged in user can't go inside
 
 function App() {
+  const baseURI = "http://localhost:8000"
+
+  useEffect(() => {
+    getApps();
+  }, []);
+
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <NavBar />
