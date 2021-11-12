@@ -1,72 +1,65 @@
 const continents = [
-    {
-        "_id": 1,
-        "name": "Africa"
-    },
-    {
-        "_id": 2,
-        "name": "Europe"
-    },
-    {
-        "_id": 3,
-        "name": "Asia"
-    },
-    {
-        "_id": 4,
-        "name": "North America"
-    },
-    {
-        "_id": 5,
-        "name": "South America"
-    },
-    {
-        "_id": 6,
-        "name": "Australia"
-    },
-    {
-        "_id": 7,
-        "name": "Antarctica"
-    }
-
-]
+  {
+    _id: 1,
+    name: "패션",
+  },
+  {
+    _id: 2,
+    name: "식당",
+  },
+  {
+    _id: 3,
+    name: "스포츠",
+  },
+  {
+    _id: 4,
+    name: "엔터테이먼트",
+  },
+  {
+    _id: 5,
+    name: "교육",
+  },
+  {
+    _id: 6,
+    name: "여행",
+  },
+  {
+    _id: 7,
+    name: "상품",
+  },
+];
 
 const price = [
-    {
-        "_id": 0,
-        "name": "Any",
-        "array": []
-    },
-    {
-        "_id": 1,
-        "name": "$0 to $199",
-        "array": [0, 199]
-    },
-    {
-        "_id": 2,
-        "name": "$200 to $249",
-        "array": [200, 249]
-    },
-    {
-        "_id": 3,
-        "name": "$250 to $279",
-        "array": [250, 279]
-    },
-    {
-        "_id": 4,
-        "name": "$280 to $299",
-        "array": [280, 299]
-    },
-    {
-        "_id": 5,
-        "name": "More than $300",
-        "array": [300, 1500000]
-    }
-]
+  {
+    _id: 0,
+    name: "Any",
+    array: [],
+  },
+  {
+    _id: 1,
+    name: "0% to 19%",
+    array: [0, 19],
+  },
+  {
+    _id: 2,
+    name: "20% to 39%",
+    array: [20, 39],
+  },
+  {
+    _id: 3,
+    name: "40% to 59%",
+    array: [40, 59],
+  },
+  {
+    _id: 4,
+    name: "60% to 79%",
+    array: [60, 79],
+  },
+  {
+    _id: 5,
+    name: "80% to FREE",
+    array: [80, 1001],
+  },
+];
 
-
-
-
-export {
-    continents,
-    price
-}
+export { continents, price };

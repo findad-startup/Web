@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { FaCode } from "react-icons/fa";
 import axios from "axios";
 import { Icon, Col, Card, Row, Carousel } from "antd";
 import Meta from "antd/lib/card/Meta";
@@ -39,7 +38,7 @@ function LandingPage() {
         }
         setPostSize(response.data.postSize);
       } else {
-        alert(" 상품들을 가져오는데 실패 했습니다.");
+        alert("상품들을 가져오는데 실패 했습니다.");
       }
     });
   };
@@ -67,7 +66,8 @@ function LandingPage() {
             </a>
           }
         >
-          <Meta title={product.title} description={`$${product.price}`} />
+          <Meta title={product.title} description={`${product.price}%`} />
+          <a>{product.description}</a>
         </Card>
       </Col>
     );
@@ -126,10 +126,14 @@ function LandingPage() {
 
   return (
     <div style={{ width: "75%", margin: "3rem auto" }}>
-      <div style={{ textAlign: "center" }}>
-        <h2>
-          Search ADs <Icon type="rocket" />{" "}
-        </h2>
+      {/* Search */}
+
+      <div
+        style={{
+          margin: "1rem auto",
+        }}
+      >
+        <SearchFeature refreshFunction={updateSearchTerm} />
       </div>
 
       {/* Filter */}
@@ -151,20 +155,9 @@ function LandingPage() {
         </Col>
       </Row>
 
-      {/* Search */}
-
-      <div
-        style={{
-          display: "flex",
-          margin: "1rem auto",
-        }}
-      >
-        <SearchFeature refreshFunction={updateSearchTerm} />
-      </div>
-
       {/* Cards */}
 
-      <Row gutter={[16, 16]}>{renderCards}</Row>
+      <Row gutter={[16, 30]}>{renderCards}</Row>
 
       <br />
 
